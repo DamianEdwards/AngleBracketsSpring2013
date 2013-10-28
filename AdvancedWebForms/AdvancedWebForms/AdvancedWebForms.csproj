@@ -188,6 +188,8 @@
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FriendlyUrls\Default.aspx" />
+    <Content Include="FriendlyUrls\Default.Mobile.aspx" />
     <Content Include="ModelBinding\AdHocModelBinding.aspx" />
     <Content Include="ModelBinding\DynamicModelBinding.aspx" />
     <Content Include="ModelBinding\Success.aspx" />
@@ -509,6 +511,21 @@
     <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
       <DependentUpon>Url_Edit.ascx</DependentUpon>
     </Compile>
+    <Compile Include="FriendlyUrls\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FriendlyUrls\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FriendlyUrls\Default.Mobile.aspx.cs">
+      <DependentUpon>Default.Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FriendlyUrls\Default.Mobile.aspx.designer.cs">
+      <DependentUpon>Default.Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FriendlyUrls\DeviceSpecificWebFormsFriendlyUrlResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

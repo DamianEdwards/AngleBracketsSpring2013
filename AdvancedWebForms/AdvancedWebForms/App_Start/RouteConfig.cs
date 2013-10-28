@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Routing;
+using AdvancedWebForms.FriendlyUrls;
 using Microsoft.AspNet.FriendlyUrls;
 
 namespace AdvancedWebForms
@@ -12,7 +13,8 @@ namespace AdvancedWebForms
         {
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
-            routes.EnableFriendlyUrls(settings);
+            
+            routes.EnableFriendlyUrls(settings, new DeviceSpecificWebFormsFriendlyUrlResolver());
         }
     }
 }
